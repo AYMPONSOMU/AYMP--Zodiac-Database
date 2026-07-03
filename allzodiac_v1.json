@@ -49,11 +49,10 @@
     "Day47": {"Prediction": "Peaceful family life", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
     "Day48": {"Prediction": "Success in negotiations", "LuckyNumber": 6, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
     "Day49": {"Prediction": "Emotional balance restored", "LuckyNumber": 1, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-    "Day50": {"Prediction": "Prosperity and fulfillment", "LuckyNumber": 5, "Action": "lucky.png", "Pariharam": "agni.png"}
-  }
-}
-{
-  "taurus": {
+    "Day50": {"Prediction": "Prosperity and fulfillment", "LuckyNumber": 5, "Action": "lucky.png", "Pariharam": "agni.png"},
+  },
+
+"taurus": {
     "Day1": {"Prediction": "Steady progress begins", "LuckyNumber": 6, "Action": "vinaya.png", "Pariharam": "yantra.png"},
     "Day2": {"Prediction": "Focus on long-term goals", "LuckyNumber": 4, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
     "Day3": {"Prediction": "Wealth creation phase", "LuckyNumber": 2, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -103,10 +102,9 @@
     "Day47": {"Prediction": "Family harmony intact", "LuckyNumber": 6, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
     "Day48": {"Prediction": "Successful deals done", "LuckyNumber": 2, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
     "Day49": {"Prediction": "Balanced emotions", "LuckyNumber": 8, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-    "Day50": {"Prediction": "Complete realization", "LuckyNumber": 3, "Action": "lucky.png", "Pariharam": "agni.png"}
-  }
-}
-{"gemini"{
+    "Day50": {"Prediction": "Complete realization", "LuckyNumber": 3, "Action": "lucky.png", "Pariharam": "agni.png"},
+  },
+  "gemini"{
   "Day1": {"Prediction": "New communication opportunities", "LuckyNumber": 5, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Networking leads to success", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Sharp decision making", "LuckyNumber": 7, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -156,10 +154,9 @@
   "Day47": {"Prediction": "Family talk brings ease", "LuckyNumber": 4, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Professional milestones", "LuckyNumber": 8, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Mental balance restored", "LuckyNumber": 6, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Complete success realized", "LuckyNumber": 1, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"cancer"{
+  "Day50": {"Prediction": "Complete success realized", "LuckyNumber": 1, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"cancer"{
   "Day1": {"Prediction": "Emotional clarity begins", "LuckyNumber": 2, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Family bond strengthens", "LuckyNumber": 7, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Inner peace guides you", "LuckyNumber": 4, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -209,10 +206,9 @@
   "Day47": {"Prediction": "Cherish your memories", "LuckyNumber": 5, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Goals align with heart", "LuckyNumber": 3, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Rest and rejuvenate", "LuckyNumber": 6, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Complete peace achieved", "LuckyNumber": 8, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"leo"{
+  "Day50": {"Prediction": "Complete peace achieved", "LuckyNumber": 8, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"leo"{
   "Day1": {"Prediction": "Radiant confidence shines", "LuckyNumber": 1, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Leadership skills recognized", "LuckyNumber": 5, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Creative vision takes flight", "LuckyNumber": 9, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -262,10 +258,9 @@
   "Day47": {"Prediction": "Harmonious leadership", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Success in negotiations", "LuckyNumber": 6, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Energy peaks high", "LuckyNumber": 8, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Ultimate achievement", "LuckyNumber": 2, "Action": "lucky.png", "Pariharam": "agni.png"}
-  }
-  }
-  {"virgo"{
+  "Day50": {"Prediction": "Ultimate achievement", "LuckyNumber": 2, "Action": "lucky.png", "Pariharam": "agni.png"},
+  },
+  "virgo"{
   "Day1": {"Prediction": "Analytical mindset brings clarity", "LuckyNumber": 5, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Focus on organized goals", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Precision leads to success", "LuckyNumber": 8, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -315,10 +310,9 @@
   "Day47": {"Prediction": "Harmonious order", "LuckyNumber": 4, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Goal oriented gains", "LuckyNumber": 9, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Steady progress remains", "LuckyNumber": 1, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Full optimization realized", "LuckyNumber": 7, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"libra"{
+  "Day50": {"Prediction": "Full optimization realized", "LuckyNumber": 7, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"libra"{
   "Day1": {"Prediction": "Seek balance in all affairs", "LuckyNumber": 6, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Harmony in partnerships", "LuckyNumber": 4, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Fair decisions bring peace", "LuckyNumber": 8, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -368,10 +362,9 @@
   "Day47": {"Prediction": "Steady connections", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Successful deals", "LuckyNumber": 9, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Emotional harmony", "LuckyNumber": 5, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Complete realization", "LuckyNumber": 1, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"scorpio"{
+  "Day50": {"Prediction": "Complete realization", "LuckyNumber": 1, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"scorpio"{
   "Day1": {"Prediction": "Intuition is extremely sharp", "LuckyNumber": 9, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Unexpected changes bring growth", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Ability to uncover secrets", "LuckyNumber": 6, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -422,9 +415,8 @@
   "Day48": {"Prediction": "Expectations met", "LuckyNumber": 6, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Clarity replaces confusion", "LuckyNumber": 1, "Action": "shakti.png", "Pariharam": "navagraha.png"},
   "Day50": {"Prediction": "Complete success and fulfillment", "LuckyNumber": 5, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"sagittarius"{
+},
+"sagittarius"{
   "Day1": {"Prediction": "New wisdom and learning", "LuckyNumber": 3, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Adventure leads to success", "LuckyNumber": 7, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Optimism attracts wealth", "LuckyNumber": 9, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -474,10 +466,9 @@
   "Day47": {"Prediction": "Growth and wisdom", "LuckyNumber": 8, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Goal oriented success", "LuckyNumber": 1, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Harmony of mind", "LuckyNumber": 6, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Total fulfillment reached", "LuckyNumber": 4, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"capricorn"{
+  "Day50": {"Prediction": "Total fulfillment reached", "LuckyNumber": 4, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"capricorn"{
   "Day1": {"Prediction": "Disciplined approach yields results", "LuckyNumber": 8, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Professional goals within reach", "LuckyNumber": 4, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Success through persistence", "LuckyNumber": 6, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -527,10 +518,9 @@
   "Day47": {"Prediction": "Focus on routine", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Career milestones met", "LuckyNumber": 1, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Solid foundation achieved", "LuckyNumber": 5, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Ultimate career success", "LuckyNumber": 4, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-}
-{"aquaries"{
+  "Day50": {"Prediction": "Ultimate career success", "LuckyNumber": 4, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"aquaries"{
   "Day1": {"Prediction": "Innovative ideas spark growth", "LuckyNumber": 4, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Breakthrough in creative projects", "LuckyNumber": 8, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Social connections bring value", "LuckyNumber": 2, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -580,9 +570,9 @@
   "Day47": {"Prediction": "Logical progress", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day48": {"Prediction": "Goals align perfectly", "LuckyNumber": 7, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Social harmony", "LuckyNumber": 1, "Action": "shakti.png", "Pariharam": "navagraha.png"},
-  "Day50": {"Prediction": "Complete success achieved", "LuckyNumber": 5, "Action": "lucky.png", "Pariharam": "agni.png"}
-}
-{"pisces"{
+  "Day50": {"Prediction": "Complete success achieved", "LuckyNumber": 5, "Action": "lucky.png", "Pariharam": "agni.png"},
+},
+"pisces"{
   "Day1": {"Prediction": "Intuition leads to wisdom", "LuckyNumber": 7, "Action": "vinaya.png", "Pariharam": "yantra.png"},
   "Day2": {"Prediction": "Creative flow is strong", "LuckyNumber": 3, "Action": "onkara.png", "Pariharam": "yantra1.jpg"},
   "Day3": {"Prediction": "Deep emotional healing", "LuckyNumber": 9, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
@@ -633,5 +623,6 @@
   "Day48": {"Prediction": "Goal achieved", "LuckyNumber": 8, "Action": "lakshmi.png", "Pariharam": "yantra2.jpg"},
   "Day49": {"Prediction": "Spiritual harmony", "LuckyNumber": 6, "Action": "shakti.png", "Pariharam": "navagraha.png"},
   "Day50": {"Prediction": "Complete realization", "LuckyNumber": 1, "Action": "lucky.png", "Pariharam": "agni.png"}
-  }
+     }
     }
+ }
