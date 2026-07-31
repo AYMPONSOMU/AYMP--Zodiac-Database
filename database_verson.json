@@ -1,1 +1,19 @@
-
+{
+  "database": "AYMP Zodiac Database",
+  "version": "2.0",
+  "author": "AYMP Studio",
+  "status": "Active",
+  "lastUpdate": "2026-07-31",
+  "totalZodiacs": 12,
+  "dailyPrediction": true,
+  "weeklyPrediction": true,
+  "monthlyPrediction": true,
+  "yearlyPrediction": true,
+  "yantras": true,
+  "powerArts": true,
+  "tokenSystem": {
+    "dailyRemedyUnlock": 500,
+    "yearPrediction": 1800,
+    "yantraPowerArts": 2500
+  }
+}
