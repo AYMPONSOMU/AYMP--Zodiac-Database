@@ -11,3 +11,18 @@ AYMP Cosmic Kingdom
 GDevelop
 Web3
 MetaMask
+# AYMP Astro Database
+
+Version: 1.0
+
+This repository powers:
+
+- AYMP Cosmic Kingdom
+- AYMP Astrology Website
+- Mobile App
+- AI Astrology Assistant
+- 999xyz999 Token Utility
+- AYMP Premium Services
+
+Status:
+Database Development in Progress
