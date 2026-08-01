@@ -78,7 +78,7 @@ return;
 
 const zodiacKey=zodiac.charAt(0).toUpperCase()+zodiac.slice(1);
 
-const jsonURL="https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/"+zodiac+"_v1.json";
+const jsonURL="https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/"+zodiac+"all_zodiac_v1.json";
 
 let today=new Date();
 
