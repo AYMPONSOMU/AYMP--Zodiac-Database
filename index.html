@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYMP Cosmic Kingdom</title>
+
+<style>
+
+body{
+
+margin:0;
+padding:0;
+font-family:Arial;
+background:#000814;
+color:white;
+text-align:center;
+
+}
+
+.container{
+
+width:90%;
+max-width:450px;
+margin:auto;
+margin-top:40px;
+
+}
+
+input,select{
+
+width:100%;
+padding:15px;
+margin-top:12px;
+border-radius:10px;
+border:none;
+font-size:18px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+margin-top:20px;
+font-size:20px;
+background:#FFD700;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+#result{
+
+margin-top:30px;
+background:#071A2E;
+padding:20px;
+border-radius:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AYMP Cosmic Kingdom</h1>
+
+<h3>Powered by AYMP Blockchain</h3>
+
+<input
+id="username"
+placeholder="Your Name">
+
+<input
+id="dob"
+placeholder="DDMMYYYY">
+
+<button onclick="findPrediction()">
+
+CHECK MY DESTINY
+
+</button>
+
+<div id="result">
+
+Waiting...
+
+</div>
+
+</div>
+
+<script>
+
+function findPrediction(){
+
+document.getElementById("result").innerHTML=
+
+"Connecting to AYMP Astro Engine...";
+
+}
+
+</script>
+
+</body>
+
+  </html>
