@@ -626,3 +626,13 @@
      }
     }
     }
+"Engine": {
+  "Version": "1.0",
+  "PredictionCycle": 50,
+  "Language": "multi",
+  "Premium": {
+    "DailyRemedy": 500,
+    "YearPrediction": 1800,
+    "YantraPowerArts": 2500
+  }
+}
