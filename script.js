@@ -1,78 +1,90 @@
-// GitHub Raw JSON URL
 const jsonURL =
 "https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/refs/heads/main/allzodiac_v1.json";
+
+function getZodiac(day, month){
+
+if((month==3 && day>=21) || (month==4 && day<=19))
+return "aries";
+
+if((month==4 && day>=20) || (month==5 && day<=20))
+return "taurus";
+
+if((month==5 && day>=21) || (month==6 && day<=20))
+return "gemini";
+
+if((month==6 && day>=21) || (month==7 && day<=22))
+return "cancer";
+
+if((month==7 && day>=23) || (month==8 && day<=22))
+return "leo";
+
+if((month==8 && day>=23) || (month==9 && day<=22))
+return "virgo";
+
+if((month==9 && day>=23) || (month==10 && day<=22))
+return "libra";
+
+if((month==10 && day>=23) || (month==11 && day<=21))
+return "scorpio";
+
+if((month==11 && day>=22) || (month==12 && day<=21))
+return "sagittarius";
+
+if((month==12 && day>=22) || (month==1 && day<=19))
+return "capricorn";
+
+if((month==1 && day>=20) || (month==2 && day<=18))
+return "aquarius";
+
+if((month==2 && day>=19) || (month==3 && day<=20))
+return "pisces";
+
+return "";
+}
 
 async function findPrediction(){
 
 let dob=document.getElementById("dob").value;
 
 if(dob.length!=8){
-
-document.getElementById("result").innerHTML="Enter DOB as DDMMYYYY";
-
+alert("DOB format : DDMMYYYY");
 return;
-
 }
 
 let day=parseInt(dob.substring(0,2));
-
 let month=parseInt(dob.substring(2,4));
 
-let zodiac="";
+let zodiac=getZodiac(day,month);
 
-if((month==3&&day>=21)||(month==4&&day<=19))
-zodiac="aries";
-
-else if((month==4&&day>=20)||(month==5&&day<=20))
-zodiac="taurus";
-
-else{
-
-document.getElementById("result").innerHTML="Zodiac not added yet.";
-
+if(zodiac==""){
+alert("Wrong DOB");
 return;
-
 }
 
-// இன்று தேதியை எடு
+// இன்று தேதியைப் பெறு
 let today=new Date().getDate();
 
-// 1 முதல் 50 வரை மட்டும்
-let dayKey="Day"+(((today-1)%50)+1);
+// Day1 முதல் Day50 வரை
+let dayNumber=((today-1)%50)+1;
 
-try{
+let dayKey="Day"+dayNumber;
 
 const response=await fetch(jsonURL);
 
 const data=await response.json();
 
-const info=data.Zodiacs[zodiac][dayKey];
+const result=data.Zodiacs[zodiac][dayKey];
 
 document.getElementById("result").innerHTML=
 
 "<h2>"+zodiac.toUpperCase()+"</h2>"+
 
-"<b>Today's Prediction</b><br>"+
+"<br>"+result.Prediction+
 
-info.Prediction+
+"<br><br>Lucky Number : "+result.LuckyNumber+
 
-"<br><br><b>Lucky Number :</b> "+
+"<br><br>Action : "+result.Action+
 
-info.LuckyNumber+
-
-"<br><br><b>Action :</b> "+
-
-info.Action+
-
-"<br><br><b>Pariharam :</b> "+
-
-info.Pariharam;
+"<br><br>Pariharam : "+result.Pariharam;
 
 }
-catch(e){
-
-document.getElementById("result").innerHTML="Database Error";
-
-}
-
-  }
