@@ -103,7 +103,17 @@ const response=await fetch(jsonURL);
 
 const data=await response.json();
 
-const info=data[zodiacKey][dayKey];
+if(
+    !data ||
+    !data[zodiacKey] ||
+    !data[zodiacKey][dayKey]
+){
+    document.getElementById("result").innerHTML =
+    "❌ "+zodiacKey+" JSON Missing ("+dayKey+")";
+    return;
+}
+
+const info = data[zodiacKey][dayKey];
 
 document.getElementById("result").innerHTML=
 
