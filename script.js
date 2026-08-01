@@ -60,13 +60,32 @@ const jsonURL=
 const zodiacKey=
 zodiac.charAt(0).toUpperCase()+zodiac.slice(1);
 
-// இன்று எந்த நாள்
-let today=new Date().getDate();
+// பெயர்
+let name = document.getElementById("username").value.trim();
 
-// Day1 முதல் Day50
-let dayNumber=((today-1)%50)+1;
+// பெயரின் எழுத்து மதிப்பு
+let total = 0;
 
-let dayKey="Day"+dayNumber;
+for(let i=0;i<name.length;i++){
+    total += name.charCodeAt(i);
+}
+
+// பிறந்த தேதி சேர்க்க
+total += day;
+total += month;
+total += parseInt(dob.substring(4,8));
+
+// இன்றைய தேதி
+let now = new Date();
+
+total += now.getDate();
+total += now.getMonth()+1;
+total += now.getFullYear();
+
+// Day1 - Day50
+let dayNumber = (total % 50) + 1;
+
+let dayKey = "Day" + dayNumber;
 
 document.getElementById("result").innerHTML=
 "Loading AYMP Astro Engine...";
