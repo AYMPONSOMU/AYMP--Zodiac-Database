@@ -1,14 +1,8 @@
 // ==============================
-// AYMP Astro Engine V1
+// AYMP Astro Engine V2
 // ==============================
 
-// உங்கள் JSON கோப்பின் பெயருக்கு ஏற்ப இந்த URL-ஐ மாற்றுங்கள்.
-const jsonURL =
-"https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/all_zodiac.json";
-
-// ------------------------------
-// Zodiac Finder
-// ------------------------------
+// Zodiac கண்டுபிடித்தல்
 function getZodiac(day, month){
 
 if((month==3 && day>=21)||(month==4 && day<=19)) return "aries";
@@ -27,9 +21,7 @@ if((month==2 && day>=19)||(month==3 && day<=20)) return "pisces";
 return "";
 }
 
-// ------------------------------
-// Main Function
-// ------------------------------
+// ===============================
 
 async function findPrediction(){
 
@@ -40,7 +32,7 @@ let dob=document.getElementById("dob").value.trim();
 if(dob.length!=8){
 
 document.getElementById("result").innerHTML=
-"❌ Please enter DOB as DDMMYYYY";
+"❌ DOB Format : DDMMYYYY";
 
 return;
 
@@ -55,16 +47,19 @@ let zodiac=getZodiac(day,month);
 if(zodiac==""){
 
 document.getElementById("result").innerHTML=
-"❌ Zodiac Not Found";
+"❌ Invalid Date";
 
 return;
 
 }
 
-// இன்று எந்த நாள்?
+// ஒவ்வொரு ராசிக்கும் தனி JSON
+const jsonURL=
+
+"https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/"+zodiac+"_v1.json";
+
 let today=new Date().getDate();
 
-// Day1...Day50
 let dayNumber=((today-1)%50)+1;
 
 let dayKey="Day"+dayNumber;
@@ -78,17 +73,15 @@ const response=await fetch(jsonURL);
 
 const data=await response.json();
 
-const info=data.Zodiacs[zodiac][dayKey];
+const info=data[dayKey];
 
 document.getElementById("result").innerHTML=
 
-"<h2>Welcome "+username+"</h2>"+
+"<h2>"+username+"</h2>"+
+
+"<br><b>"+zodiac.toUpperCase()+"</b>"+
 
 "<hr>"+
-
-"<b>Zodiac :</b> "+zodiac.toUpperCase()+
-
-"<br><br>"+
 
 "<b>Today's Prediction</b><br>"+
 
@@ -100,31 +93,24 @@ info.Prediction+
 
 "<br><br>"+
 
-"<b>Action :</b><br>"+
-
-info.Action+
+"<b>Action :</b> "+info.Action+
 
 "<br><br>"+
 
-"<b>Pariharam :</b><br>"+
-
-info.Pariharam+
-
-"<br><br>"+
+"<b>Pariharam :</b> "+info.Pariharam+
 
 "<hr>"+
 
 "Powered by AYMP Astro Engine";
 
 }
+
 catch(error){
 
 document.getElementById("result").innerHTML=
 
-"❌ Unable to Load Database.<br><br>"+
-
-error;
+"❌ Database Error<br><br>"+error;
 
 }
 
-  }
+}
