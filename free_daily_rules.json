@@ -1,0 +1,12 @@
+{
+  "freeDailyPrediction": true,
+  "freeLimitDays": 90,
+  "showLuckyNumber": true,
+  "showLuckyColor": true,
+  "showRemedy": false,
+  "showYantra": false,
+  "showPowerArts": false,
+  "premiumDailyUnlock": 500,
+  "yearPredictionUnlock": 1800,
+  "yantraPowerArtsUnlock": 2500
+}
