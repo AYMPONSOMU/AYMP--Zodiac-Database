@@ -123,7 +123,9 @@ document.getElementById("result").innerHTML=
 "<hr>"+
 
 "<b>Zodiac :</b> "+zodiacKey+
-
+    
+"<br><b>Selected :</b> "+dayKey+
+    
 "<br><br>"+
 
 "<b>Today's Prediction</b><br>"+
