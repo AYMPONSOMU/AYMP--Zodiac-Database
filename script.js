@@ -1,8 +1,11 @@
-// ==============================
-// AYMP Astro Engine V2
-// ==============================
+// ==========================================
+// AYMP Astro Engine V2.1
+// Compatible with:
+// {
+//   "Aries": { "Day1": {...} }
+// }
+// ==========================================
 
-// Zodiac கண்டுபிடித்தல்
 function getZodiac(day, month){
 
 if((month==3 && day>=21)||(month==4 && day<=19)) return "aries";
@@ -21,12 +24,9 @@ if((month==2 && day>=19)||(month==3 && day<=20)) return "pisces";
 return "";
 }
 
-// ===============================
-
 async function findPrediction(){
 
 let username=document.getElementById("username").value.trim();
-
 let dob=document.getElementById("dob").value.trim();
 
 if(dob.length!=8){
@@ -39,7 +39,6 @@ return;
 }
 
 let day=parseInt(dob.substring(0,2));
-
 let month=parseInt(dob.substring(2,4));
 
 let zodiac=getZodiac(day,month);
@@ -53,13 +52,18 @@ return;
 
 }
 
-// ஒவ்வொரு ராசிக்கும் தனி JSON
+// JSON File URL
 const jsonURL=
-
 "https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/"+zodiac+"_v1.json";
 
+// JSON Key உருவாக்குதல்
+const zodiacKey=
+zodiac.charAt(0).toUpperCase()+zodiac.slice(1);
+
+// இன்று எந்த நாள்
 let today=new Date().getDate();
 
+// Day1 முதல் Day50
 let dayNumber=((today-1)%50)+1;
 
 let dayKey="Day"+dayNumber;
@@ -71,17 +75,37 @@ try{
 
 const response=await fetch(jsonURL);
 
+if(!response.ok){
+
+throw new Error("JSON File Not Found");
+
+}
+
 const data=await response.json();
 
-const info=data[dayKey];
+if(!data[zodiacKey]){
+
+throw new Error("Zodiac Data Missing");
+
+}
+
+const info=data[zodiacKey][dayKey];
+
+if(!info){
+
+throw new Error(dayKey+" Missing");
+
+}
 
 document.getElementById("result").innerHTML=
 
-"<h2>"+username+"</h2>"+
-
-"<br><b>"+zodiac.toUpperCase()+"</b>"+
+"<h2>Welcome "+username+"</h2>"+
 
 "<hr>"+
+
+"<b>Zodiac :</b> "+zodiacKey+
+
+"<br><br>"+
 
 "<b>Today's Prediction</b><br>"+
 
@@ -109,8 +133,10 @@ catch(error){
 
 document.getElementById("result").innerHTML=
 
-"❌ Database Error<br><br>"+error;
+"❌ "+error.message;
+
+console.log(error);
 
 }
 
-}
+  }
