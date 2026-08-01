@@ -11,9 +11,7 @@ AYMP Cosmic Kingdom
 GDevelop
 Web3
 MetaMask
-# AYMP Astro Database
 
-Version: 1.0
 
 This repository powers:
 
