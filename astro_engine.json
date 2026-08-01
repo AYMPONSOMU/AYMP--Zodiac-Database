@@ -1,1 +1,40 @@
+{
+  "engine": {
+    "version": "1.0",
 
+    "zodiacRules": {
+
+      "aries": {
+        "start": {
+          "month": 3,
+          "day": 21
+        },
+        "end": {
+          "month": 4,
+          "day": 19
+        }
+      },
+
+      "taurus": {
+        "start": {
+          "month": 4,
+          "day": 20
+        },
+        "end": {
+          "month": 5,
+          "day": 20
+        }
+      }
+
+    },
+
+    "dailyRule": {
+
+      "todayDay": "SystemDate",
+
+      "prediction": "Day(SystemDate)"
+
+    }
+
+  }
+}
