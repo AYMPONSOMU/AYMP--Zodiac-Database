@@ -476,3 +476,4 @@ console.log(version());
 console.log("Developed For AYMP Cosmic Kingdom");
 
 console.log("Powered By AYMP");   
+loadZodiacDatabase();
