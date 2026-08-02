@@ -1,51 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>AYMP Cosmic Kingdom</title>
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>
+        AYMP Cosmic Zodiac
+    </title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="mainContainer">
 
-<h1>AYMP Cosmic Kingdom</h1>
+    <!-- Cosmic Header -->
 
-<h3>Powered by AYMP Blockchain</h3>
+    <header class="header">
 
-<input
-type="text"
-id="username"
-placeholder="Enter Your Name">
+        <img
+            src="images/logo.png"
+            class="logo"
+            alt="AYMP Logo">
 
-<input
-type="text"
-id="dob"
-placeholder="Enter DOB (DDMMYYYY)"
-maxlength="8">
+        <div>
 
-<button onclick="findPrediction()">
+            <h1>
 
-CHECK MY DESTINY
+                AYMP COSMIC ZODIAC
 
-</button>
+            </h1>
 
-<div id="result">
+            <h3>
 
-Welcome to AYMP Astro Engine
+                Daily Horoscope Prediction
+
+            </h3>
+
+        </div>
+
+    </header>
+
+    <!-- Main Layout -->
+
+    <div class="contentArea">
+
+        <!-- Left Panel -->
+
+        <div class="leftPanel">
+
+            <h2>
+
+                Welcome
+
+            </h2>
+
+            <p>
+
+                Enter your Name and
+                Date of Birth to receive
+                today's Cosmic Prediction.
+
+            </p>
+                        <!-- Name -->
+
+            <label class="label">
+
+                Full Name
+
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter Your Name">
+
+            <!-- Date Of Birth -->
+
+            <label class="label">
+
+                Date Of Birth
+
+            </label>
+
+            <input
+                type="date"
+                id="dob">
+
+            <!-- Button -->
+
+            <button
+                class="predictButton"
+                onclick="startPrediction()">
+
+                🔮 Check Today's Prediction
+
+            </button>
+
+            <!-- Loading -->
+
+            <div
+                id="loading"
+                class="loading">
+
+                Loading Cosmic Energy...
+
+            </div>
+
+        </div>
+
+        <!-- Right Panel -->
+
+        <div
+            class="rightPanel">
+
+            <div
+                id="resultPanel">
+                              <!-- User Name -->
+
+                <h2 id="resultName">
+
+                    Your Name
+
+                </h2>
+
+                <!-- Zodiac -->
+
+                <h3 id="resultZodiac">
+
+                    Zodiac Sign
+
+                </h3>
+
+                <!-- Prediction Day -->
+
+                <p id="resultDay">
+
+                    Day 1
+
+                </p>
+
+                <hr>
+
+                <!-- Prediction -->
+
+                <h2>
+
+                    Today's Prediction
+
+                </h2>
+
+                <p id="prediction">
+
+                    Your prediction will appear here.
+
+                </p>
+
+                <hr>
+
+                <!-- Lucky Details -->
+
+                <div class="luckyGrid">
+
+                    <div class="card">
+
+                        <h4>Lucky Number</h4>
+
+                        <p id="luckyNumber"></p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h4>Lucky Color</h4>
+
+                        <p id="luckyColor"></p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h4>Lucky Direction</h4>
+
+                        <p id="luckyDirection"></p>
+
+                    </div>
+
+                    <div class="card">
+
+                        <h4>Lucky Time</h4>
+
+                        <p id="luckyTime"></p>
+
+                    </div>
+
+                </div>
+
+                <hr>
+                <!-- God -->
+
+                <h3>
+
+                    God
+
+                </h3>
+
+                <p id="god"></p>
+
+                <!-- Mantra -->
+
+                <h3>
+
+                    Mantra
+
+                </h3>
+
+                <p id="mantra"></p>
+
+                <hr>
+
+                <!-- Images -->
+
+                <div class="imageContainer">
+
+                    <div class="imageCard">
+
+                        <h3>
+
+                            Today's Action
+
+                        </h3>
+
+                        <img
+                            id="actionImage"
+                            src=""
+                            alt="Action">
+
+                    </div>
+
+                    <div class="imageCard">
+
+                        <h3>
+
+                            Pariharam
+
+                        </h3>
+
+                        <img
+                            id="pariharamImage"
+                            src=""
+                            alt="Pariharam">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        © 2026 AYMP Cosmic Kingdom
+
+        <br>
+
+        Powered By AYMP
+
+    </footer>
 
 </div>
 
-</div>
+<!-- JavaScript -->
 
 <script src="script.js"></script>
 
 </body>
 
-</html>
+  </html>
