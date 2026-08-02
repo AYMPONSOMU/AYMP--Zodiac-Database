@@ -439,6 +439,116 @@
       "Pariharam": "agni.png",
       "Mantra": "Om Suryaya Namaha",
       "God": "Lord Surya"
+  },
+    "Day41": {
+      "Prediction": "Divine blessings guide you towards success.",
+      "LuckyNumber": 5,
+      "LuckyColor": "Saffron",
+      "LuckyDirection": "East",
+      "LuckyTime": "06:45 AM",
+      "Action": "vinaya.png",
+      "Pariharam": "yantra.png",
+      "Mantra": "Om Gam Ganapataye Namaha",
+      "God": "Lord Ganesha"
+    },
+    "Day42": {
+      "Prediction": "Fresh beginnings open new opportunities.",
+      "LuckyNumber": 8,
+      "LuckyColor": "White",
+      "LuckyDirection": "North-East",
+      "LuckyTime": "08:15 AM",
+      "Action": "onkara.png",
+      "Pariharam": "yantra1.jpg",
+      "Mantra": "Om Namah Shivaya",
+      "God": "Lord Shiva"
+    },
+    "Day43": {
+      "Prediction": "Great success awaits your sincere efforts.",
+      "LuckyNumber": 2,
+      "LuckyColor": "Golden Yellow",
+      "LuckyDirection": "North",
+      "LuckyTime": "09:45 AM",
+      "Action": "lakshmi.png",
+      "Pariharam": "yantra2.jpg",
+      "Mantra": "Om Shreem Mahalakshmiye Namaha",
+      "God": "Goddess Lakshmi"
+    },
+    "Day44": {
+      "Prediction": "Your personal goals move closer to completion.",
+      "LuckyNumber": 7,
+      "LuckyColor": "Green",
+      "LuckyDirection": "West",
+      "LuckyTime": "11:30 AM",
+      "Action": "shakti.png",
+      "Pariharam": "navagraha.png",
+      "Mantra": "Om Dum Durgayai Namaha",
+      "God": "Goddess Durga"
+    },
+    "Day45": {
+      "Prediction": "Creative ideas bring recognition and appreciation.",
+      "LuckyNumber": 4,
+      "LuckyColor": "Blue",
+      "LuckyDirection": "South-East",
+      "LuckyTime": "01:15 PM",
+      "Action": "lucky.png",
+      "Pariharam": "agni.png",
+      "Mantra": "Om Agnaye Namaha",
+      "God": "Agni Deva"
+    },
+    "Day46": {
+      "Prediction": "Financial stability improves steadily.",
+      "LuckyNumber": 9,
+      "LuckyColor": "Gold",
+      "LuckyDirection": "East",
+      "LuckyTime": "03:00 PM",
+      "Action": "vinaya.png",
+      "Pariharam": "yantra.png",
+      "Mantra": "Om Gam Ganapataye Namaha",
+      "God": "Lord Ganesha"
+    },
+    "Day47": {
+      "Prediction": "Peace and harmony fill your family life.",
+      "LuckyNumber": 3,
+      "LuckyColor": "Pink",
+      "LuckyDirection": "North",
+      "LuckyTime": "04:30 PM",
+      "Action": "onkara.png",
+      "Pariharam": "yantra1.jpg",
+      "Mantra": "Om Namah Shivaya",
+      "God": "Lord Shiva"
+    },
+    "Day48": {
+      "Prediction": "Negotiations and discussions end in your favor.",
+      "LuckyNumber": 6,
+      "LuckyColor": "Purple",
+      "LuckyDirection": "North-East",
+      "LuckyTime": "05:15 PM",
+      "Action": "lakshmi.png",
+      "Pariharam": "yantra2.jpg",
+      "Mantra": "Om Shreem Mahalakshmiye Namaha",
+      "God": "Goddess Lakshmi"
+    },
+    "Day49": {
+      "Prediction": "Emotional balance and inner peace return.",
+      "LuckyNumber": 1,
+      "LuckyColor": "Silver",
+      "LuckyDirection": "East",
+      "LuckyTime": "07:45 AM",
+      "Action": "shakti.png",
+      "Pariharam": "navagraha.png",
+      "Mantra": "Om Dum Durgayai Namaha",
+      "God": "Goddess Durga"
+    },
+    "Day50": {
+      "Prediction": "Prosperity, happiness and fulfillment surround you today.",
+      "LuckyNumber": 5,
+      "LuckyColor": "Golden",
+      "LuckyDirection": "North",
+      "LuckyTime": "09:00 AM",
+      "Action": "lucky.png",
+      "Pariharam": "agni.png",
+      "Mantra": "Om Suryaya Namaha",
+      "God": "Lord Surya"
   }
-  }
+     }
   }
