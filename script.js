@@ -290,3 +290,189 @@ function showPrediction(data){
     document.getElementById("resultPanel").style.display="block";
 
         }
+/* ==========================================================
+   AYMP Cosmic Kingdom
+   Daily Zodiac Engine
+   Part 4
+==========================================================*/
+
+/* -------------------------
+   Loading
+--------------------------*/
+
+function showLoading(){
+
+    document.getElementById("loading").style.display="block";
+
+}
+
+function hideLoading(){
+
+    document.getElementById("loading").style.display="none";
+
+}
+
+/* -------------------------
+   Reset Screen
+--------------------------*/
+
+function resetPrediction(){
+
+    document.getElementById("resultPanel").style.display="none";
+
+    document.getElementById("prediction").innerHTML="";
+
+    document.getElementById("luckyNumber").innerHTML="";
+
+    document.getElementById("luckyColor").innerHTML="";
+
+    document.getElementById("luckyDirection").innerHTML="";
+
+    document.getElementById("luckyTime").innerHTML="";
+
+    document.getElementById("mantra").innerHTML="";
+
+    document.getElementById("god").innerHTML="";
+
+    document.getElementById("actionImage").src="";
+
+    document.getElementById("pariharamImage").src="";
+
+}
+
+/* -------------------------
+   Validate DOB
+--------------------------*/
+
+function validateDOB(date){
+
+    const today=new Date();
+
+    if(date>today){
+
+        alert("Future Date is not allowed.");
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+/* -------------------------
+   Image Error
+--------------------------*/
+
+function imageNotFound(img){
+
+    img.src="images/default.png";
+
+}
+
+/* -------------------------
+   Safe Search
+--------------------------*/
+
+async function startPrediction(){
+
+    resetPrediction();
+
+    showLoading();
+
+    try{
+
+        searchPrediction();
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert("Unexpected Error");
+
+    }
+
+    hideLoading();
+
+}
+/* ==========================================================
+   AYMP Cosmic Kingdom
+   Daily Zodiac Engine
+   Part 5 (Final)
+==========================================================*/
+
+/* -------------------------
+   Engine Initialize
+--------------------------*/
+
+async function initializeEngine(){
+
+    console.log("================================");
+
+    console.log("AYMP Cosmic Zodiac Engine");
+
+    console.log("Loading Database...");
+
+    console.log("================================");
+
+    await loadZodiacDatabase();
+
+    console.log("Database Ready");
+
+}
+
+/* -------------------------
+   Enter Key Support
+--------------------------*/
+
+document.addEventListener("keydown",function(event){
+
+    if(event.key==="Enter"){
+
+        startPrediction();
+
+    }
+
+});
+
+/* -------------------------
+   Window Load
+--------------------------*/
+
+window.onload=async()=>{
+
+    await initializeEngine();
+
+    document.getElementById("resultPanel").style.display="none";
+
+    console.log("================================");
+
+    console.log("AYMP Zodiac Ready");
+
+    console.log("Powered By AYMP");
+
+    console.log("================================");
+
+};
+
+/* -------------------------
+   Utility
+--------------------------*/
+
+function version(){
+
+    return "AYMP Zodiac Engine v1.0";
+
+}
+
+console.log(version());
+
+/* -------------------------
+   Developer Info
+--------------------------*/
+
+console.log("Developed For AYMP Cosmic Kingdom");
+
+console.log("Powered By AYMP");   
