@@ -9,7 +9,7 @@
 //==========================================================
 
 const JSON_URL =
-"https://aymponsomu.github.io/AYMP--Zodiac-Database/all_zodiac_v1.json";
+"https://raw.githubusercontent.com/AYMPONSOMU/AYMP--Zodiac-Database/main/all_zodiac_v1.json";
 
 let zodiacDatabase = {};
 
