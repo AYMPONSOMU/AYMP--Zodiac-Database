@@ -1,51 +1,35 @@
 /* ==========================================================
    AYMP COSMIC ZODIAC
-   SCRIPT.JS V2.0
-   PART 1
+   SCRIPT.JS - PART 1
+   Database + Zodiac Functions
 ========================================================== */
 
-/* ===========================
-   JSON DATABASE
-=========================== */
+//==========================================================
+// JSON DATABASE
+//==========================================================
 
 const JSON_URL =
-"./all_zodiac_v1.json";
-
-/* ===========================
-   GLOBAL VARIABLES
-=========================== */
+"https://aymponsomu.github.io/AYMP--Zodiac-Database/all_zodiac_v1.json";
 
 let zodiacDatabase = {};
 
-let currentPrediction = null;
-
-let currentZodiac = "";
-
-let currentDay = "";
-
-/* ===========================
-   LOAD DATABASE
-=========================== */
+//==========================================================
+// LOAD DATABASE
+//==========================================================
 
 async function loadDatabase() {
 
     try {
 
-        console.log("Loading Zodiac Database...");
-
         const response = await fetch(JSON_URL);
 
         if (!response.ok) {
-
-            throw new Error("JSON Database Not Found");
-
+            throw new Error("Unable to load Zodiac Database");
         }
 
         zodiacDatabase = await response.json();
 
-        console.log("Database Loaded Successfully");
-
-        console.log(zodiacDatabase);
+        console.log("✅ Zodiac Database Loaded");
 
     }
 
@@ -59,9 +43,9 @@ async function loadDatabase() {
 
 }
 
-/* ===========================
-   FIND ZODIAC
-=========================== */
+//==========================================================
+// FIND ZODIAC
+//==========================================================
 
 function getZodiac(day, month) {
 
@@ -102,72 +86,64 @@ function getZodiac(day, month) {
 
 }
 
-/* ===========================
-   GET TODAY NUMBER
-=========================== */
+//==========================================================
+// DAY CALCULATOR (1 - 50)
+//==========================================================
 
-function getTodayPrediction() {
+function getPredictionDay(date) {
 
     const today = new Date();
 
-    let number = today.getDate();
+    const birth = new Date(date);
 
-    if (number > 50) {
+    let value =
+        today.getDate() +
+        today.getMonth() +
+        birth.getDate() +
+        birth.getMonth();
 
-        number = ((number - 1) % 50) + 1;
+    value = (value % 50);
 
+    if (value === 0)
+        value = 50;
+
+    return "Day" + value;
+
+}
+
+//==========================================================
+// IMAGE PATH
+//==========================================================
+
+function imagePath(fileName) {
+
+    return "images/" + fileName;
+
+}
+
+console.log("PART 1 Loaded Successfully");
+//==========================================================
+// START PREDICTION
+// PART 2
+//==========================================================
+
+async function startPrediction() {
+
+    if (Object.keys(zodiacDatabase).length === 0) {
+        await loadDatabase();
     }
 
-    return "Day" + number;
+    const name = document.getElementById("username").value.trim();
+    const dob = document.getElementById("dob").value;
 
-}
-/* ==========================================================
-   PART 2
-   INITIALIZE + START PREDICTION
-========================================================== */
-
-/* ===========================
-   INITIALIZE
-=========================== */
-
-async function initialize() {
-
-    await loadDatabase();
-
-    document.getElementById("loading").style.display = "none";
-
-    document.getElementById("resultPanel").style.display = "none";
-
-    console.log("AYMP Zodiac Ready");
-
-}
-
-/* ===========================
-   START PREDICTION
-=========================== */
-
-function startPrediction() {
-
-    const username =
-        document.getElementById("username").value.trim();
-
-    const dob =
-        document.getElementById("dob").value;
-
-    if (username === "") {
-
+    if (name === "") {
         alert("Please Enter Your Name");
-
         return;
-
     }
 
     if (dob === "") {
-
         alert("Please Select Date Of Birth");
-
         return;
-
     }
 
     document.getElementById("loading").style.display = "block";
@@ -175,161 +151,99 @@ function startPrediction() {
     const birthDate = new Date(dob);
 
     const day = birthDate.getDate();
-
     const month = birthDate.getMonth() + 1;
 
-    currentZodiac = getZodiac(day, month);
+    const zodiac = getZodiac(day, month);
 
-    currentDay = getTodayPrediction();
+    const predictionDay = getPredictionDay(dob);
 
-    console.log("Name :", username);
-
-    console.log("DOB :", dob);
-
-    console.log("Zodiac :", currentZodiac);
-
-    console.log("Prediction :", currentDay);
-
-    if (!zodiacDatabase[currentZodiac]) {
-
+    if (!zodiacDatabase[zodiac]) {
+        document.getElementById("loading").style.display = "none";
         alert("Zodiac Data Not Found");
-
-        document.getElementById("loading").style.display = "none";
-
         return;
-
     }
 
-    currentPrediction =
-        zodiacDatabase[currentZodiac][currentDay];
+    const todayData = zodiacDatabase[zodiac][predictionDay];
 
-    if (!currentPrediction) {
-
-        alert("Prediction Not Found");
-
+    if (!todayData) {
         document.getElementById("loading").style.display = "none";
-
+        alert("Prediction Data Not Found");
         return;
-
     }
-
-    displayPrediction(username);
-
-}
-/* ==========================================================
-   PART 3
-   DISPLAY PREDICTION
-========================================================== */
-
-function displayPrediction(username) {
-
-    document.getElementById("loading").style.display = "none";
 
     document.getElementById("resultPanel").style.display = "block";
 
-    /* ===========================
-       USER DETAILS
-    =========================== */
+    document.getElementById("resultName").innerText = name;
+    document.getElementById("resultZodiac").innerText = zodiac;
+    document.getElementById("resultDay").innerText = predictionDay;
 
-    document.getElementById("resultName").innerHTML =
-        username;
+    document.getElementById("prediction").innerText =
+        todayData.Prediction;
 
-    document.getElementById("resultZodiac").innerHTML =
-        currentZodiac;
+    document.getElementById("luckyNumber").innerText =
+        todayData.LuckyNumber;
 
-    document.getElementById("resultDay").innerHTML =
-        currentDay;
+    document.getElementById("luckyColor").innerText =
+        todayData.LuckyColor;
 
-    /* ===========================
-       TODAY PREDICTION
-    =========================== */
+    document.getElementById("luckyDirection").innerText =
+        todayData.LuckyDirection;
 
-    document.getElementById("prediction").innerHTML =
-        currentPrediction.Prediction;
+    document.getElementById("luckyTime").innerText =
+        todayData.LuckyTime;
 
-    /* ===========================
-       LUCKY DETAILS
-    =========================== */
+    document.getElementById("god").innerText =
+        todayData.God;
 
-    document.getElementById("luckyNumber").innerHTML =
-        currentPrediction.LuckyNumber;
+    document.getElementById("mantra").innerText =
+        todayData.Mantra;
 
-    document.getElementById("luckyColor").innerHTML =
-        currentPrediction.LuckyColor;
+    console.log("Prediction Loaded Successfully");
+    }
+//==========================================================
+// PART 3
+// IMAGE + INITIALIZE + EVENTS
+//==========================================================
 
-    document.getElementById("luckyDirection").innerHTML =
-        currentPrediction.LuckyDirection;
+//----------------------------------------------------------
+// UPDATE IMAGES
+//----------------------------------------------------------
 
-    document.getElementById("luckyTime").innerHTML =
-        currentPrediction.LuckyTime;
+document.getElementById("actionImage").src =
+    imagePath(todayData.Action);
 
-    /* ===========================
-       GOD & MANTRA
-    =========================== */
+document.getElementById("pariharamImage").src =
+    imagePath(todayData.Pariharam);
 
-    document.getElementById("god").innerHTML =
-        currentPrediction.God;
+//----------------------------------------------------------
+// LOADING OFF
+//----------------------------------------------------------
 
-    document.getElementById("mantra").innerHTML =
-        currentPrediction.Mantra;
-
-    /* ===========================
-       ACTION IMAGE
-    =========================== */
-
-    document.getElementById("actionImage").src =
-        "images/action/" + currentPrediction.Action;
-
-    document.getElementById("actionImage").alt =
-        currentPrediction.Action;
-
-    /* ===========================
-       PARIHARAM IMAGE
-    =========================== */
-
-    document.getElementById("pariharamImage").src =
-        "images/pariharam/" + currentPrediction.Pariharam;
-
-    document.getElementById("pariharamImage").alt =
-        currentPrediction.Pariharam;
-
-    console.log("Prediction Displayed Successfully");
+document.getElementById("loading").style.display = "none";
 
 }
-/* ==========================================================
-   PART 4
-   WINDOW LOAD + RESET + EVENTS
-========================================================== */
 
-/* ===========================
-   RESET FORM
-=========================== */
+//==========================================================
+// INITIALIZE
+//==========================================================
 
-function resetForm() {
-
-    document.getElementById("username").value = "";
-
-    document.getElementById("dob").value = "";
-
-    document.getElementById("resultPanel").style.display = "none";
+async function initializeEngine() {
 
     document.getElementById("loading").style.display = "none";
 
-    currentPrediction = null;
+    document.getElementById("resultPanel").style.display = "none";
 
-    currentZodiac = "";
+    await loadDatabase();
 
-    currentDay = "";
-
-    console.log("Form Reset Successfully");
+    console.log("AYMP Zodiac Engine Ready");
 
 }
 
-/* ===========================
-   ENTER KEY SUPPORT
-=========================== */
+//==========================================================
+// ENTER KEY SUPPORT
+//==========================================================
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
 
     if (event.key === "Enter") {
 
@@ -339,162 +253,22 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-/* ===========================
-   PAGE INITIALIZATION
-=========================== */
+//==========================================================
+// WINDOW LOAD
+//==========================================================
 
 window.onload = async function () {
 
-    document.getElementById("loading").style.display = "block";
-
-    await initialize();
-
-    console.log("==============================");
-
-    console.log("AYMP Cosmic Zodiac");
-
-    console.log("Database Loaded Successfully");
-
-    console.log("Ready For Prediction");
-
-    console.log("==============================");
+    await initializeEngine();
 
 };
 
-/* ===========================
-   IMAGE ERROR HANDLING
-=========================== */
+//==========================================================
+// VERSION
+//==========================================================
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    const actionImage = document.getElementById("actionImage");
-
-    const pariharamImage = document.getElementById("pariharamImage");
-
-    actionImage.onerror = function () {
-
-        this.src = "images/default.png";
-
-    };
-
-    pariharamImage.onerror = function () {
-
-        this.src = "images/default.png";
-
-    };
-
-});
-/* ==========================================================
-   PART 5
-   FINAL UTILITIES
-========================================================== */
-
-/* ===========================
-   VERSION
-=========================== */
-
-function version() {
-
-    return "AYMP Cosmic Zodiac Engine v2.0";
-
-}
-
-console.log(version());
-
-/* ===========================
-   DEVELOPER INFO
-=========================== */
-
-console.log("================================");
-
-console.log("AYMP Cosmic Zodiac");
-
+console.log("=================================");
+console.log("AYMP COSMIC ZODIAC");
+console.log("Version : 2.0");
 console.log("Powered By AYMP");
-
-console.log("Developer Version : 2.0");
-
-console.log("================================");
-
-/* ===========================
-   DATABASE CHECK
-=========================== */
-
-function databaseReady() {
-
-    return Object.keys(zodiacDatabase).length > 0;
-
-}
-
-/* ===========================
-   SAFE START
-=========================== */
-
-function safeStartPrediction() {
-
-    if (!databaseReady()) {
-
-        alert("Database Not Loaded.");
-
-        return;
-
-    }
-
-    startPrediction();
-
-}
-
-/* ===========================
-   CLEAR RESULT
-=========================== */
-
-function clearResult() {
-
-    document.getElementById("prediction").innerHTML = "";
-
-    document.getElementById("luckyNumber").innerHTML = "";
-
-    document.getElementById("luckyColor").innerHTML = "";
-
-    document.getElementById("luckyDirection").innerHTML = "";
-
-    document.getElementById("luckyTime").innerHTML = "";
-
-    document.getElementById("god").innerHTML = "";
-
-    document.getElementById("mantra").innerHTML = "";
-
-    document.getElementById("actionImage").src = "";
-
-    document.getElementById("pariharamImage").src = "";
-
-}
-
-/* ===========================
-   AUTO RESET BEFORE NEW SEARCH
-=========================== */
-
-document.getElementById("username").addEventListener("focus", function () {
-
-    clearResult();
-
-});
-
-document.getElementById("dob").addEventListener("focus", function () {
-
-    clearResult();
-
-});
-
-/* ===========================
-   SCRIPT END
-=========================== */
-
-console.log("================================");
-
-console.log("AYMP Cosmic Zodiac Ready");
-
-console.log("System Loaded Successfully");
-
-console.log("Waiting For User Input");
-
-console.log("================================");
+console.log("=================================");
